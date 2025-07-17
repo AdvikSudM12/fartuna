@@ -1,4 +1,3 @@
-import React from 'react';
 import './../styles/DynamicBackground.css';
 
 const DynamicBackground = () => {
