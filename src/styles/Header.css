@@ -1,0 +1,42 @@
+.app-header {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  z-index: 50;
+}
+
+.header-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 1.2rem; /* Увеличили шрифт */
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.6); /* Добавили тень для читаемости */
+}
+
+.header-link:hover {
+  transform: scale(1.05); /* Добавили эффект при наведении */
+}
+
+.laptop-icon {
+  width: 32px; /* Увеличили иконку */
+  height: 32px;
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    top: 20px;
+    left: 20px;
+  }
+  .header-link span {
+    display: none;
+  }
+  .laptop-icon {
+    width: 28px;
+    height: 28px;
+  }
+} 

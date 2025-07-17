@@ -1,0 +1,66 @@
+.app-container {
+  position: relative; /* Для позиционирования кнопки настроек */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: transparent; /* Делаем фон прозрачным */
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  text-align: center;
+  padding: 1rem;
+  box-sizing: border-box;
+  overflow-x: hidden; /* Предотвращаем горизонтальный скролл */
+}
+
+h1 {
+  margin-bottom: 1rem; /* Уменьшаем отступ для большего колеса */
+  font-weight: 300;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.wheel-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%; /* Занимает всю доступную ширину */
+}
+
+.settings-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 2.5rem; /* Увеличиваем иконку */
+  cursor: pointer;
+  color: white;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+  z-index: 50;
+}
+
+.settings-button:hover {
+  opacity: 1;
+  transform: rotate(45deg);
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .app-container {
+    padding: 0.5rem;
+  }
+
+  .settings-button {
+    font-size: 2rem;
+    top: 10px;
+    right: 10px;
+  }
+} 

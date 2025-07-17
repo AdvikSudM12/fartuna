@@ -1,0 +1,74 @@
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Помещаем фон позади всего */
+  background: #20242b; /* Фоновый цвет на всякий случай */
+}
+
+.shape-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px); /* Ключевой эффект размытия */
+  opacity: 0.6;
+}
+
+/* Определяем разные размеры, цвета и начальные позиции */
+.shape-blob.one {
+  width: 550px;
+  height: 550px;
+  background: #E83A55;
+  top: -150px;
+  left: -200px;
+  animation: move 25s infinite alternate;
+}
+
+.shape-blob.two {
+  width: 450px;
+  height: 450px;
+  background: #70C8DD;
+  top: 100px;
+  right: -100px;
+  animation: move 30s infinite alternate-reverse;
+}
+
+.shape-blob.three {
+  width: 300px;
+  height: 300px;
+  background: #F6A000;
+  bottom: -100px;
+  left: 20%;
+  animation: move 20s infinite alternate;
+}
+
+.shape-blob.four {
+    width: 250px;
+    height: 250px;
+    background: #83C8B8;
+    bottom: -50px;
+    right: 25%;
+    animation: move 35s infinite alternate-reverse;
+}
+
+.shape-blob.five {
+    width: 200px;
+    height: 200px;
+    background: #B14191;
+    top: 50%;
+    left: 10%;
+    animation: move 28s infinite alternate;
+}
+
+/* Анимация движения */
+@keyframes move {
+  from {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  to {
+    transform: translate(200px, 100px) rotate(360deg);
+    border-radius: 40% 60% 70% 30% / 40% 40% 60% 50%;
+  }
+} 
